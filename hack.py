@@ -17,7 +17,7 @@ with open("slovar.txt","r") as r:
             print(str(c*100/max_c) + "%")
         #сверка страницы с ошибочной страницей
         if ("""<p>Логин или пароль неверны!</p>  \n<br /> \n<form method="get">\nUsername: <input type="text" name="user" /> <br /> \nPassword: <input type="password" name="pass" /> <br />\n<input type="submit" name="submit" value="Login" />\n</form> \n""" in a.text)==0:
-            #вывод информации о пароле и текста из не ошибочной страницы
+            #вывод информации о пароле и текста из не ошибочной страницы (error page)
             print(l[c])
             print(a.text)
             break
